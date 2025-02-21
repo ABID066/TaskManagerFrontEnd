@@ -6,14 +6,14 @@ const NotFound = () => {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-            <h1 className="text-7xl font-bold text-gray-800">404</h1>
-            <h2 className="text-2xl font-semibold text-gray-600 mt-2">Oops! Page Not Found</h2>
-            <p className="text-gray-500 mt-4 text-center max-w-md">
+            <h1 className="text-9xl font-extrabold text-[#cb0c9f]">404</h1>
+            <h2 className="text-3xl font-bold text-gray-800 mt-4">Oops! Page Not Found</h2>
+            <p className="text-gray-600 mt-2 text-center max-w-lg">
                 The page you are looking for might have been removed or is temporarily unavailable.
             </p>
             <button
                 onClick={() => navigate("/")}
-                className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                className="mt-6 px-6 py-3 bg-[#cb0c9f] text-white text-lg font-medium rounded-full shadow-lg hover:bg-[#a80a7f] transition-all duration-300"
             >
                 Go Back Home
             </button>
