@@ -14,7 +14,7 @@ class SessionHelper{
     }
     removeSession=()=>{
         localStorage.clear();
-        window.location.href="/";
+        window.location.href="/login";
     }
     setEmail(email){
         localStorage.setItem('Email', email);
