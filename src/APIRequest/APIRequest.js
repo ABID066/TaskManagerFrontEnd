@@ -2,7 +2,7 @@ import { ErrorToast, SuccessToast } from "../helper/FormHelper.js";
 import axios from "axios";
 import store from "../redux/store/store.js";
 import { HideLoader, ShowLoader } from "../redux/state-slice/setting-slice.js";
-import {getToken, setEmail, setOTP, setToken, setUserDetails} from "../helper/SessionHelper.js";
+import {getToken, removeSession, setEmail, setOTP, setToken, setUserDetails} from "../helper/SessionHelper.js";
 import {SetCanceledTask, SetCompletedTask, SetNewTask, SetProgressTask} from "../redux/state-slice/task-slice.js";
 import {SetSummary} from "../redux/state-slice/summary-slice.js";
 import {SetProfile} from "../redux/state-slice/profile-slice.js";
@@ -147,6 +147,7 @@ export async function TaskSummary() {
 
     } catch (err) {
         ErrorToast("Something Went Wrong");
+        removeSession();
     }
     finally {
         store.dispatch(HideLoader())
